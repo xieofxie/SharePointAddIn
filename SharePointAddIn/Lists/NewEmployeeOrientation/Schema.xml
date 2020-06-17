@@ -1,29 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<List xmlns:ows="Microsoft SharePoint" Title="NewEmployeeOrientation" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/NewEmployeeOrientation" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+<List xmlns:ows="Microsoft SharePoint" Title="NewEmployeeOrientation" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/NewEmployeeOrientation" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
   <MetaData>
     <ContentTypes>
-      
-      
-    <ContentTypeRef ID="0x01">
-        <Folder TargetName="Item" />
-      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+
+
+      <ContentType ID="0x01007A19E7FE24644663A8844AE7933357FE" Name="NewEmployee" Group="Employee Orientation" Description="Represents a new employee" Inherits="FALSE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{9b76c721-1f23-4957-ac8d-e14b61ec2a1e}" DisplayName="Division" Required="FALSE" Description="The division of the company where the employee works." Name="Division" />
+          <FieldRef ID="{77a7720f-bdba-4d87-967e-b908a889009f}" DisplayName="Orientation Stage" Required="TRUE" Description="The current orientation stage of the employee." Name="OrientationStage" />
+          <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
+          <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Employee" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
     <Fields>
-      
-    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /></Fields>
+
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+
+      <Field ID="{9b76c721-1f23-4957-ac8d-e14b61ec2a1e}" Name="Division" Title="Division" DisplayName="Division" Description="The division of the company where the employee works." Group="Employee Orientation" Type="Text" Required="FALSE"></Field>
+
+      <Field ID="{77a7720f-bdba-4d87-967e-b908a889009f}" Name="OrientationStage" Title="OrientationStage" DisplayName="Orientation Stage" Group="Employee Orientation" Description="The current orientation stage of the employee." Type="Choice" Required="TRUE">
+        <CHOICES>
+          <CHOICE>Not Started</CHOICE>
+          <CHOICE>Tour of building</CHOICE>
+          <CHOICE>HR paperwork</CHOICE>
+          <CHOICE>Corporate network access</CHOICE>
+          <CHOICE>Completed</CHOICE>
+        </CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">Not Started</MAPPING>
+          <MAPPING Value="2">Tour of building</MAPPING>
+          <MAPPING Value="3">HR paperwork</MAPPING>
+          <MAPPING Value="4">Corp network access</MAPPING>
+          <MAPPING Value="5">Completed</MAPPING>
+        </MAPPINGS>
+        <Default>Not Started</Default>
+      </Field>
+    </Fields>
     <Views>
-      
-      
-    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
         <Toolbar Type="Standard" />
         <XslLink Default="TRUE">main.xsl</XslLink>
         <RowLimit Paged="TRUE">30</RowLimit>
-      <ViewFields>
-        <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Employee" />
-      </ViewFields>
+        <ViewFields>
+          <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
+          <FieldRef Name="Division" ID="{9b76c721-1f23-4957-ac8d-e14b61ec2a1e}" />
+          <FieldRef Name="OrientationStage" ID="{77a7720f-bdba-4d87-967e-b908a889009f}" />
+        </ViewFields>
         <Query>
           <OrderBy>
-            
-          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
         </Query>
         <ParameterBindings>
           <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
@@ -36,19 +64,24 @@
         <XslLink Default="TRUE">main.xsl</XslLink>
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">30</RowLimit>
+
         <ViewFields>
           <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
+          <FieldRef Name="Division" ID="{9b76c721-1f23-4957-ac8d-e14b61ec2a1e}" />
+          <FieldRef Name="OrientationStage" ID="{77a7720f-bdba-4d87-967e-b908a889009f}" />
         </ViewFields>
         <Query>
           <OrderBy>
-            
-          <FieldRef Name="ID"></FieldRef></OrderBy>
+
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
         </Query>
         <ParameterBindings>
           <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
           <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
         </ParameterBindings>
-      </View></Views>
+      </View>
+    </Views>
     <Forms>
       <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
       <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />

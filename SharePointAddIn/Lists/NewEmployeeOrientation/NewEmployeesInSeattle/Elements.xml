@@ -5,6 +5,8 @@
       <Rows>
         <Row>
           <Field Name="Title">Tom Higginbotham</Field>
+          <Field Name="Division">Manufacturing</Field>
+          <Field Name="OrientationStage">Tour of building</Field>
         </Row>
         <Row>
           <Field Name="Title">Satomi Hayakawa</Field>
