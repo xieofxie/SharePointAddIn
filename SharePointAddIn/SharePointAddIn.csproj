@@ -50,6 +50,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Site Columns\Division\Elements.xml" />
+    <Content Include="Site Columns\OrientationStage\Elements.xml" />
     <None Include="Lists\NewEmployeeOrientation\NewEmployeesInSeattle\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{99a69f46-d624-4457-94c8-6702e8350657}</SharePointProjectItemId>
     </None>
@@ -62,6 +64,12 @@
     </None>
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="Site Columns\Division\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{da1ef30d-c1dc-4655-a520-96ecaeb1be00}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\OrientationStage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9edae754-e388-4d1a-aa04-dd45b63cb964}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-3.4.1.min.map" />
