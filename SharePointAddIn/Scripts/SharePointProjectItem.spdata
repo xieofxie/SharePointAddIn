@@ -10,5 +10,6 @@
     <ProjectItemFile Source="jquery-3.4.1.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="jquery-3.4.1.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="jquery-3.4.1.intellisense.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="OrientationStageRendering.js" Target="Scripts\" Type="ElementFile" />
   </Files>
 </ProjectItem>
