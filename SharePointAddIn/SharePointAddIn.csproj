@@ -46,6 +46,7 @@
     <Content Include="Lists\NewEmployeeOrientation\Elements.xml" />
     <Content Include="Lists\NewEmployeeOrientation\NewEmployeesInSeattle\Elements.xml" />
     <Content Include="Lists\NewEmployeeOrientation\Schema.xml" />
+    <Content Include="Pages\Help.aspx" />
     <Content Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
