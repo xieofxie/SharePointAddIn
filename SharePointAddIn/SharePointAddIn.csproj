@@ -47,6 +47,9 @@
     <Content Include="Lists\NewEmployeeOrientation\NewEmployeesInSeattle\Elements.xml" />
     <Content Include="Lists\NewEmployeeOrientation\Schema.xml" />
     <Content Include="Pages\Help.aspx" />
+    <Content Include="RunOrientationAdd-in\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
     <Content Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -72,6 +75,9 @@
     </None>
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="RunOrientationAdd-in\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4c813fa0-70cc-47fb-a6b1-8a5e724bc07b}</SharePointProjectItemId>
+    </None>
     <None Include="Site Columns\Division\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{da1ef30d-c1dc-4655-a520-96ecaeb1be00}</SharePointProjectItemId>
     </None>
