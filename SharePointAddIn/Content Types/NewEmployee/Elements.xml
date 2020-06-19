@@ -5,7 +5,6 @@
     <FieldRefs>
       <FieldRef ID="{9b76c721-1f23-4957-ac8d-e14b61ec2a1e}" DisplayName="Division" Required="FALSE" Description="The division of the company where the employee works." Name="Division" />
       <FieldRef ID="{77a7720f-bdba-4d87-967e-b908a889009f}" DisplayName="Orientation Stage" Required="TRUE" Description="The current orientation stage of the employee." Name="OrientationStage" />
-      <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
       <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Employee" />
     </FieldRefs>
   </ContentType>
